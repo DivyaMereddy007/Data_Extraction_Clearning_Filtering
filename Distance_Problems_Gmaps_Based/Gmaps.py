@@ -52,6 +52,21 @@ x = r.json()
 # print the value of x
 print(x['rows'][0]['elements'][0]['duration']['text'])
 
+travel_time,distance=x['rows'][0]['elements'][0]['duration']['text'],x['rows'][0]['elements'][0]['distance']['text']
+travel_time
+travel_time=''
+travel_time.split('mins')
+travel_time,distance=x['rows'][0]['elements'][0]['duration']['text'],x['rows'][0]['elements'][0]['distance']['text']
+travel_time
+#travel_time=''
+try:
+    hours_time=int(travel_time.split('hours')[0])
+    min_time=travel_time.split('hours')[1]
+    min_time=int(min_time.split('min')[0])
+except:
+    hours_time=0
+    min_time=int(travel_time.split('min')[0])
+time=float(hours_time*60+min_time)
 #####################################################################################################################################################################
 sample_url_working='https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyB4_i3OOyfHdKXPI1nIEl5nUihyUuqFSg4'
 # coordinations format
