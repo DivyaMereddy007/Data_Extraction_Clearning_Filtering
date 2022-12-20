@@ -1,0 +1,6 @@
+install.packages("readr")
+library(readr)
+setwd('Users\\divyamereddy\\Documents\\GitHub\\MachineLearningProjects\\ML_Project_Development\\Fuzzylogic\\Sample_Data')
+download.file('https://hpi.de/fileadmin/user_upload/fachgebiete/naumann/projekte/repeatability/Restaurants/mdedup/restaurants.tsv', 'restaurants.tsv')
+df<-read.csv('https://raw.githubusercontent.com/bot13956/datasets/master/introduction_to_physics_grades.csv')
+head(df)
